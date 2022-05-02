@@ -230,13 +230,12 @@ header {
     }
 }
 
-.how{
+.how {
     width: 100%;
-    height: 1000px;
     margin: 200px 0 0 0;
 
 
-    .how_container{
+    .how_container {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -248,28 +247,51 @@ header {
         padding: 0 0 60px 0;
 
 
-        .how__title{
+        .how__title {
             margin: 50px 0 0 0;
             font-size: 50px;
             color: white;
             font-weight: bold;
         }
 
-        .how__text{
+        .how__text {
             margin: 50px 0;
             font-size: 20px;
             color: white;
         }
 
-        .how__items{
+        .how__img {
+            background-image: url(/logoispum/assets/phone2.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 300px;
+            height: 500px;
+            background-size: 100%;
+            z-index: 1;
+            position: absolute;
+            margin-top: 250px;
+
+            .how__img-background {
+                position: absolute;
+                width: 190px;
+                height: 410px;
+                background-color: rgba(255, 255, 255, 0.1);
+                z-index: 0;
+                margin: 45px 0 0 55px;
+                border-radius: 20px;
+            }
+        }
+
+        .how__items {
             display: flex;
             gap: 50px;
-            .how__item{
+
+            .how__item {
                 display: flex;
                 gap: 12px;
                 align-items: center;
 
-                .how__check-mark{
+                .how__check-mark {
                     width: 30px;
                     height: 30px;
                     background-color: rgb(0, 255, 200);
@@ -280,22 +302,24 @@ header {
                     font-weight: bold;
                 }
 
-                .how__check-text{
+                .how__check-text {
                     font-size: 20px;
                     color: white;
                 }
             }
         }
-        .how__subtitle{
+
+        .how__subtitle {
             font-size: 40px;
             color: white;
             text-align: center;
             font-weight: bold;
-            margin: 400px 0 0 0 ;
+            margin: 400px 0 0 0;
             line-height: 60px;
+            z-index: 2;
         }
 
-        .how__button{
+        .how__button {
             margin: 40px 0 0 0;
             width: 220px;
             height: 60px;
@@ -306,6 +330,79 @@ header {
             align-items: center;
             cursor: pointer;
             font-weight: bold;
+        }
+    }
+}
+
+.charge {
+    width: 100%;
+    margin: 100px 0 100px 0;
+
+    .charge__container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .charge__title {
+            font-size: 50px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .charge__subtitle {
+            margin: 20px 0 0 0;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .charge__items {
+            display: flex;
+            margin: 50px 0 0 0;
+            gap: 50px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+
+            .charge__item {
+                border: rgba(8, 83, 12, 0.2) solid 2px;
+                border-radius: 12px;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                .charge__item-upper {
+                    display: flex;
+                    height: 30px;
+                    gap: 15px;
+                    align-items: center;
+
+                    .charge__energy {
+                        color: white;
+                        font-weight: bold;
+                        width: 30px;
+                        height: 30px;
+                        background-color: rgb(0, 255, 200);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 3px;
+                    }
+
+                    .charge__item-title {
+                        font-size: 17px;
+                        color: white;
+                        font-weight: bold;
+                    }
+                }
+
+                .charge__item-subtitle {
+                    font-size: 14px;
+                    color: white;
+                }
+            }
         }
     }
 }
