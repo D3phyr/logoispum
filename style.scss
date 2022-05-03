@@ -92,7 +92,7 @@ html {
 }
 
 body {
-    background-color: #01130a;
+    background-color: #010e07;
 }
 
 header {
@@ -401,6 +401,278 @@ header {
                 .charge__item-subtitle {
                     font-size: 14px;
                     color: white;
+                }
+            }
+        }
+    }
+}
+
+.access {
+    width: 100%;
+    margin: 0 0 100px 0;
+
+    .access__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .access__text {
+            margin: 300px auto 0 0;
+            gap: 30px;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+
+            .access__title {
+                color: white;
+                font-size: 45px;
+                line-height: 60px;
+                letter-spacing: 2px;
+
+                .access__splitsie {
+                    font-weight: bold;
+                }
+            }
+
+            .access__subtitle {
+                color: white;
+                font-size: 15px;
+                line-height: 25px;
+                letter-spacing: 1px;
+            }
+
+            .access__input-box {
+                display: flex;
+                gap: 40px;
+
+                .access__input {
+                    width: 270px;
+                    padding: 10px;
+                    background-color: transparent;
+                    color: white;
+                    border-left: rgba(8, 83, 12, 0.2) solid 2px;
+                }
+
+                .access__button {
+                    width: 220px;
+                    height: 60px;
+                    background-color: rgb(0, 255, 200);
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    font-weight: bold;
+                    color: black;
+                }
+            }
+        }
+
+        .access__back-button {
+            margin: 0 0 0 auto;
+            font-size: 15px;
+            border-right: rgba(156, 156, 156, 0.6) solid 2px;
+            color: rgba(156, 156, 156, 0.6);
+            padding-right: 15px;
+            letter-spacing: 4px;
+            cursor: pointer;
+        }
+
+        .access__img-container {
+            position: absolute;
+            width: 500px;
+            height: 600px;
+            margin: 0px 0 0 450px;
+            z-index: 0;
+
+
+            .access__img {
+                position: absolute;
+                background-image: url(/logoispum/assets/phone3.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 100%;
+                height: 100%;
+                background-size: 100%;
+                filter: hue-rotate(298deg);
+            }
+
+            .access__gradient {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                background: linear-gradient(0deg, #010e07 0%, #010e07 16.19%, rgba(0, 0, 0, 0) 30.73%);
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+
+    .footer-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .footer__upper-section {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 0 0 50px 0;
+            border-bottom: rgba(8, 83, 12, 0.2) solid 2px;
+
+            .footer__logo {
+                margin: 0 auto 70px 0;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                cursor: pointer;
+
+                .footer__logo-img {
+                    background-image: url(/logoispum/assets/logo.png);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 30px;
+                    height: 30px;
+                }
+
+                .footer__logo-text {
+                    color: white;
+                    font-size: 20px;
+                }
+            }
+
+            .footer__title {
+                color: white;
+                font-size: 60px;
+                font-weight: bold;
+            }
+
+            .footer__subtitle {
+                color: white;
+                font-size: 20px;
+                margin: 30px 0 45px 0;
+            }
+
+            .footer__links {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                .footer__info {
+                    display: flex;
+                    gap: 17px;
+                    color: rgb(216, 216, 216);
+                    align-items: center;
+
+                    .footer__about {
+                        font-size: 13px;
+                        cursor: pointer;
+                    }
+
+                    .footer__map {
+                        font-size: 13px;
+                        padding: 0 17px;
+                        border-left: rgb(216, 216, 216) solid 2px;
+                        border-right: rgb(216, 216, 216) solid 2px;
+                        cursor: pointer;
+                    }
+
+                    .footer__email {
+                        font-size: 13px;
+                        cursor: pointer;
+                    }
+                }
+
+                .footer__social {
+                    display: flex;
+                    gap: 30px;
+
+                    .footer__instagram {
+                        background-image: url(/logoispum/assets/instagram.svg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        width: 30px;
+                        height: 30px;
+                        cursor: pointer;
+                    }
+
+                    .footer__facebook {
+                        background-image: url(/logoispum/assets/facebook.svg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        width: 30px;
+                        height: 30px;
+                        cursor: pointer;
+                    }
+
+                    .footer__pinterest {
+                        background-image: url(/logoispum/assets/pinterest.svg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        width: 30px;
+                        height: 30px;
+                        cursor: pointer;
+                    }
+
+                    .footer__twitter {
+                        background-image: url(/logoispum/assets/twitter.svg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        width: 30px;
+                        height: 30px;
+                        cursor: pointer;
+                    }
+
+                    .footer__youtube {
+                        background-image: url(/logoispum/assets/youtube.svg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        width: 30px;
+                        height: 30px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .footer__lower-section {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .footer__rights {
+                color: white;
+                font-size: 13px;
+            }
+
+            .footer__rules {
+                display: flex;
+                gap: 15px;
+
+                .footer__policy {
+                    color: white;
+                    font-size: 13px;
+                    padding: 0 15px 0 0;
+                    border-right: white solid 2px;
+                    cursor: pointer;
+                }
+
+                .footer__terms {
+                    color: white;
+                    font-size: 13px;
+                    cursor: pointer;
                 }
             }
         }
