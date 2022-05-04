@@ -10,15 +10,15 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="hcontainer">
             <div class="header__items-left">
                 <div class="header__logo-img"></div>
                 <div class="header__logo-text">LѲGØIPSUM</div>
             </div>
             <div class="header__items-right">
-                <div class="header__how">HOW IT WORKS</div>
-                <div class="header__features">FEATURES</div>
+                <a href="#how" class="header__how">HOW IT WORKS</a>
+                <a href="#features" class="header__features">FEATURES</a>
             </div>
         </div>
     </header>
@@ -43,12 +43,19 @@
         <div class="container">
             <div class="integrations__container">
                 <div class="integrations__title">OUR INTEGRATIONS</div>
-                <div class="integrations__box"></div>
+                <div class="integrations__box">
+                    <img class="integrations__logo" src="/logoispum/assets/logo1.png" alt="">
+                    <img class="integrations__logo" src="/logoispum/assets/logo2.png" alt="">
+                    <img class="integrations__logo" src="/logoispum/assets/logo3.png" alt="">
+                    <img class="integrations__logo" src="/logoispum/assets/logo4.png" alt="">
+                    <img class="integrations__logo" src="/logoispum/assets/logo5.png" alt="">
+                    <img class="integrations__logo" src="/logoispum/assets/logo6.png" alt="">
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="how">
+    <section id="how" class="how">
         <div class="container">
             <div class="how_container">
                 <div class="how__title">Here's how it works</div>
@@ -131,7 +138,7 @@
         </div>
     </section>
 
-    <section class="access">
+    <section id="features" class="access">
         <div class="container">
             <div class="access__container">
                 <div class="access__text">
@@ -144,7 +151,7 @@
                         <a class="access__button" href="">GET EARLY ACCESS</a>
                     </div>
                 </div>
-                <a class="access__back-button">GO BACK TO TOP</a>
+                <a href="#header" class="access__back-button">GO BACK TO TOP</a>
                 <div class="access__img-container">
                     <div class="access__img"></div>
                     <div class="access__gradient"></div>
@@ -189,6 +196,10 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+        
+    </script>
 </body>
 
 </html>
