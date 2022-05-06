@@ -91,8 +91,18 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: #010e07;
+.theme {
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+* {
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.theme {
+  background-color: #f3f3f3;
 }
 
 header {
@@ -140,6 +150,8 @@ header .hcontainer .header__items-left .header__logo-img {
 header .hcontainer .header__items-left .header__logo-text {
   color: white;
   font-size: 20px;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
 }
 
 header .hcontainer .header__items-right {
@@ -150,6 +162,37 @@ header .hcontainer .header__items-right {
       -ms-flex-align: center;
           align-items: center;
   gap: 15px;
+}
+
+header .hcontainer .header__items-right .header__theme-container {
+  height: 20px;
+  width: 70px;
+  background-color: #535353;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .hcontainer .header__items-right .header__theme-container .header_theme-sun {
+  position: absolute;
+  margin: 0 0 0 53px;
+}
+
+header .hcontainer .header__items-right .header__theme-container .header_theme-moon {
+  position: absolute;
+  margin: 0 0 0 3px;
+}
+
+header .hcontainer .header__items-right .header__theme-container .header__theme-button {
+  height: 25px;
+  width: 25px;
+  border-radius: 15px;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
 }
 
 header .hcontainer .header__items-right .header__how {
@@ -242,6 +285,10 @@ header .hcontainer .header__items-right .header__features {
   font-weight: bold;
 }
 
+body {
+  background-color: #010e07;
+}
+
 .integrations {
   width: 100%;
 }
@@ -263,7 +310,7 @@ header .hcontainer .header__items-right .header__features {
 .integrations .integrations__container .integrations__title {
   text-align: center;
   color: white;
-  font-size: 17px;
+  font-size: 20px;
   width: 100%;
 }
 
@@ -273,21 +320,49 @@ header .hcontainer .header__items-right .header__features {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .integrations .integrations__container .integrations__box .integrations__logo {
+  margin: 20px 0 0 0;
   height: 30px;
-  pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.zxc {
+  margin-left: auto;
+  -webkit-animation-name: xxx;
+          animation-name: xxx;
+  -webkit-animation-duration: 12s;
+          animation-duration: 12s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes xxx {
+  from {
+    margin-left: 80%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes xxx {
+  from {
+    margin-left: 80%;
+  }
+  to {
+    margin-left: 0;
+  }
 }
 
 .how {
