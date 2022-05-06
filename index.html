@@ -10,15 +10,21 @@
 </head>
 
 <body>
+    <div class="theme" :style="{backgroundColor: theme ? '#010e07' : 'white'}" >
     <header id="header">
         <div class="hcontainer">
             <div class="header__items-left">
-                <div class="header__logo-img"></div>
-                <div class="header__logo-text">LѲGØIPSUM</div>
+                <div class="header__logo-img" :style="{filter: theme ? 'invert(0)' : 'invert(100%)'}"></div>
+                <div class="header__logo-text" :style="{color: theme ? 'white' : 'black'}">LѲGØIPSUM</div>
             </div>
             <div class="header__items-right">
-                <a href="#how" class="header__how">HOW IT WORKS</a>
-                <a href="#features" class="header__features">FEATURES</a>
+                <div class="header__theme-container">
+                    <div class="header_theme-sun">☀️</div>
+                    <div class="header_theme-moon">🌙</div>
+                    <div class="header__theme-button" v-on:click="theme = !theme" :style="{backgroundColor: theme ? 'rgba(8, 83, 12)' : 'rgb(180, 180, 180)', transform: theme ? 'translate(-3px)' : 'translate(50px)'}"></div>
+                </div>
+                <a href="#how" class="header__how" :style="{color: theme ? 'white' : 'black'}">HOW IT WORKS</a>
+                <a href="#features" class="header__features" :style="{color: theme ? 'white' : 'black'}">FEATURES</a>
             </div>
         </div>
     </header>
@@ -28,12 +34,12 @@
             <div class="start-screen__container">
                 <div class="start-screen__img"></div>
                 <div class="start-screen__items">
-                    <h2 class="start-screen__title">Is Splitting Finances <br> A Hectic Task?</h2>
-                    <p class="start-screen__text">Splitsie is here to help you ease your finance distribution amoung
+                    <h2 class="start-screen__title" :style="{color: theme ? 'white' : 'black'}">Is <span :style="{color: theme ? 'white' : 'rgb(0, 255, 200)'}">Splitting Finances</span> <br> A Hectic Task?</h2>
+                    <p class="start-screen__text" :style="{color: theme ? 'white' : 'black'}">Splitsie is here to help you ease your finance distribution amoung
                         <br>
                         your friends and family.
                     </p>
-                    <a class="start-screen__button">DOWNLOAD NOW</a>
+                    <a class="start-screen__button" :style="{color: theme ? 'black' : 'white'}">DOWNLOAD NOW</a>
                 </div>
             </div>
         </div>
@@ -42,7 +48,7 @@
     <section class="integrations">
         <div class="container">
             <div class="integrations__container">
-                <div class="integrations__title">OUR INTEGRATIONS</div>
+                <div class="integrations__title" :style="{color: theme ? 'white' : 'black'}">OUR INTEGRATIONS</div>
                 <div class="integrations__box">
                     <img class="integrations__logo" src="/logoispum/assets/logo1.png" alt="">
                     <img class="integrations__logo" src="/logoispum/assets/logo2.png" alt="">
@@ -58,28 +64,28 @@
     <section id="how" class="how">
         <div class="container">
             <div class="how_container">
-                <div class="how__title">Here's how it works</div>
-                <div class="how__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, voluptates
+                <div class="how__title" :style="{color: theme ? 'white' : 'black'}">Here's how it <span :style="{color: theme ? 'white' : 'rgb(0, 255, 200)'}">works</span></div>
+                <div class="how__text" :style="{color: theme ? 'white' : 'black'}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, voluptates
                     asperiores impedit excepturi culpa rem!</div>
                 <div class="how__img">
                     <div class="how__img-background"></div>
                 </div>
                 <div class="how__items">
                     <div class="how__item">
-                        <div class="how__check-mark">✓</div>
-                        <div class="how__check-text">Invite Friends.</div>
+                        <div class="how__check-mark" :style="{color: theme ? 'black' : 'white'}">✓</div>
+                        <div class="how__check-text" :style="{color: theme ? 'white' : 'black'}">Invite Friends.</div>
                     </div>
                     <div class="how__item">
-                        <div class="how__check-mark">✓</div>
-                        <div class="how__check-text">Split Costs.</div>
+                        <div class="how__check-mark" :style="{color: theme ? 'black' : 'white'}">✓</div>
+                        <div class="how__check-text" :style="{color: theme ? 'white' : 'black'}">Split Costs.</div>
                     </div>
                     <div class="how__item">
-                        <div class="how__check-mark">✓</div>
-                        <div class="how__check-text">Save Money.</div>
+                        <div class="how__check-mark" :style="{color: theme ? 'black' : 'white'}">✓</div>
+                        <div class="how__check-text" :style="{color: theme ? 'white' : 'black'}">Save Money.</div>
                     </div>
                 </div>
-                <div class="how__subtitle">Set it and Forget it. <br> Automatic Subscription Sharing</div>
-                <a class="how__button">DOWNLOAD NOW</a>
+                <div class="how__subtitle" :style="{color: theme ? 'white' : 'black'}">Set it and Forget it. <br> Automatic Subscription Sharing</div>
+                <a class="how__button" :style="{color: theme ? 'black' : 'white'}">DOWNLOAD NOW</a>
             </div>
         </div>
     </section>
@@ -87,51 +93,51 @@
     <section class="charge">
         <div class="container">
             <div class="charge__container">
-                <div class="charge__title">Get Excited!</div>
-                <div class="charge__subtitle">Here is a sneak peak of our upcoming features</div>
+                <div class="charge__title" :style="{color: theme ? 'white' : 'black'}">Get Excited!</div>
+                <div class="charge__subtitle" :style="{color: theme ? 'white' : 'black'}">Here is a sneak peak of our upcoming features</div>
                 <div class="charge__items">
                     <div class="charge__item">
                         <div class="charge__item-upper">
                             <div class="charge__energy">⚡</div>
-                            <div class="charge__item-title">Fast and intuitive</div>
+                            <div class="charge__item-title" :style="{color: theme ? 'white' : 'black'}">Fast and intuitive</div>
                         </div>
-                        <div class="charge__item-subtitle">Let's flatten the learning curve.</div>
+                        <div class="charge__item-subtitle" :style="{color: theme ? 'white' : 'black'}">Let's flatten the learning curve.</div>
                     </div>
                     <div class="charge__item">
                         <div class="charge__item-upper">
                             <div class="charge__energy">⚡</div>
-                            <div class="charge__item-title">Safely</div>
+                            <div class="charge__item-title" :style="{color: theme ? 'white' : 'black'}">Safely</div>
                         </div>
-                        <div class="charge__item-subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing.</div>
+                        <div class="charge__item-subtitle" :style="{color: theme ? 'white' : 'black'}">Lorem, ipsum dolor sit amet consectetur adipisicing.</div>
                     </div>
                     <div class="charge__item">
                         <div class="charge__item-upper">
                             <div class="charge__energy">⚡</div>
-                            <div class="charge__item-title">Protected from external influence</div>
+                            <div class="charge__item-title" :style="{color: theme ? 'white' : 'black'}">Protected from external influence</div>
                         </div>
-                        <div class="charge__item-subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        <div class="charge__item-subtitle" :style="{color: theme ? 'white' : 'black'}">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                             Veritatis!</div>
                     </div>
                     <div class="charge__item">
                         <div class="charge__item-upper">
                             <div class="charge__energy">⚡</div>
-                            <div class="charge__item-title">Lorem ipsum dolor sit.</div>
+                            <div class="charge__item-title" :style="{color: theme ? 'white' : 'black'}">Lorem ipsum dolor sit.</div>
                         </div>
-                        <div class="charge__item-subtitle">Lorem ipsum dolor sit amet.</div>
+                        <div class="charge__item-subtitle" :style="{color: theme ? 'white' : 'black'}">Lorem ipsum dolor sit amet.</div>
                     </div>
                     <div class="charge__item">
                         <div class="charge__item-upper">
                             <div class="charge__energy">⚡</div>
-                            <div class="charge__item-title">Lorem ipsum dolor sit amet consectetur. </div>
+                            <div class="charge__item-title" :style="{color: theme ? 'white' : 'black'}">Lorem ipsum dolor sit amet consectetur. </div>
                         </div>
-                        <div class="charge__item-subtitle">Lorem ipsum dolor sit amet consectetur.</div>
+                        <div class="charge__item-subtitle" :style="{color: theme ? 'white' : 'black'}">Lorem ipsum dolor sit amet consectetur.</div>
                     </div>
                     <div class="charge__item">
                         <div class="charge__item-upper">
                             <div class="charge__energy">⚡</div>
-                            <div class="charge__item-title">Lorem, ipsum dolor.</div>
+                            <div class="charge__item-title" :style="{color: theme ? 'white' : 'black'}">Lorem, ipsum dolor.</div>
                         </div>
-                        <div class="charge__item-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                        <div class="charge__item-subtitle" :style="{color: theme ? 'white' : 'black'}">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
                     </div>
                 </div>
             </div>
@@ -142,19 +148,19 @@
         <div class="container">
             <div class="access__container">
                 <div class="access__text">
-                    <div class="access__title">Are you excited for <br> <span class="access__splitsie">Splitsie?</span>
+                    <div class="access__title" :style="{color: theme ? 'white' : 'black'}">Are you excited for <br> <span class="access__splitsie">Splitsie?</span>
                     </div>
-                    <div class="access__subtitle">Get early access. Sign up to the waitlist to be the <br> first to try
+                    <div class="access__subtitle" :style="{color: theme ? 'white' : 'black'}">Get early access. Sign up to the waitlist to be the <br> first to try
                         out Sonuum and stay in the loop.</div>
                     <div class="access__input-box">
-                        <input class="access__input" placeholder="YOUR EMAIL" type="text">
-                        <a class="access__button" href="">GET EARLY ACCESS</a>
+                        <input class="access__input" placeholder="YOUR EMAIL" type="text" :style="{color: theme ? 'white' : 'black'}">
+                        <a class="access__button" href="" :style="{color: theme ? 'black' : 'white'}">GET EARLY ACCESS</a>
                     </div>
                 </div>
                 <a href="#header" class="access__back-button">GO BACK TO TOP</a>
                 <div class="access__img-container">
                     <div class="access__img"></div>
-                    <div class="access__gradient"></div>
+                    <div class="access__gradient"  :style="{background: theme ? 'linear-gradient(0deg, #010e07 0%, #010e07 16.19%, rgba(0, 0, 0, 0) 30.73%)' : 'linear-gradient(0deg, white 0%, white 16.19%, rgba(0, 0, 0, 0) 30.73%)'}"></div>
                 </div>
             </div>
         </div>
@@ -165,40 +171,50 @@
             <div class="footer-container">
                 <div class="footer__upper-section">
                     <div class="footer__logo">
-                        <div class="footer__logo-img"></div>
-                        <div class="footer__logo-text">LѲGØIPSUM</div>
+                        <div class="footer__logo-img" :style="{filter: theme ? 'invert(0)' : 'invert(100%)'}"></div>
+                        <div class="footer__logo-text" :style="{color: theme ? 'white' : 'black'}">LѲGØIPSUM</div>
                     </div>
-                    <div class="footer__title">Split Bills.</div>
-                    <div class="footer__subtitle">Join 5.9M+ members and win revards worth 5K crores daily.</div>
+                    <div class="footer__title" :style="{color: theme ? 'white' : 'black'}">Split Bills.</div>
+                    <div class="footer__subtitle" :style="{color: theme ? 'white' : 'black'}">Join 5.9M+ members and win revards worth 5K crores daily.</div>
                     <div class="footer__links">
                         <div class="footer__info">
-                            <div class="footer__about">ABOUT US</div>
-                            <div class="footer__map">SITE MAP</div>
-                            <div class="footer__email">EMAIL: SUPPORT@SPLITSIE.COM</div>
+                            <div class="footer__about" :style="{color: theme ? 'white' : 'black'}">ABOUT US</div>
+                            <div class="footer__map" :style="{color: theme ? 'white' : 'black'}">SITE MAP</div>
+                            <div class="footer__email" :style="{color: theme ? 'white' : 'black'}">EMAIL: SUPPORT@SPLITSIE.COM</div>
                         </div>
                         <div class="footer__social">
-                            <div class="footer__instagram"></div>
-                            <div class="footer__facebook"></div>
-                            <div class="footer__pinterest"></div>
-                            <div class="footer__twitter"></div>
-                            <div class="footer__youtube"></div>
+                            <div class="footer__instagram"  :style="{filter: theme ? 'invert(0)' : 'invert(100%)'}"></div>
+                            <div class="footer__facebook" :style="{filter: theme ? 'invert(0)' : 'invert(100%)'}"></div>
+                            <div class="footer__pinterest" :style="{filter: theme ? 'invert(0)' : 'invert(100%)'}"></div>
+                            <div class="footer__twitter" :style="{filter: theme ? 'invert(0)' : 'invert(100%)'}"></div>
+                            <div class="footer__youtube" :style="{filter: theme ? 'invert(0)' : 'invert(100%)'}"></div>
                         </div>
                     </div>
                 </div>
                 <div class="footer__lower-section">
-                    <div class="footer__rights">© 2022 Splitsie Private Limited. All rights reserved.</div>
+                    <div class="footer__rights" :style="{color: theme ? 'white' : 'black'}">© 2022 Splitsie Private Limited. All rights reserved.</div>
                     <div class="footer__rules">
-                        <div class="footer__policy">Privacy Policy</div>
-                        <div class="footer__terms">Terms And Conditions</div>
+                        <div class="footer__policy" :style="{color: theme ? 'white' : 'black'}">Privacy Policy</div>
+                        <div class="footer__terms" :style="{color: theme ? 'white' : 'black'}">Terms And Conditions</div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
+</div>
+
     <script src="https://unpkg.com/vue@3"></script>
     <script>
-        
+        Vue.createApp({
+            data() {
+                return {
+                    theme: true,
+                }
+            },
+        }).mount('body')
+
+        let z = 3;
     </script>
 </body>
 
